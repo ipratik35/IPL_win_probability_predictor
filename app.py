@@ -18,7 +18,7 @@ Cities = ['Bangalore', 'Delhi', 'Kolkata', 'Mumbai', 'Hyderabad', 'Chennai',
        'Raipur', 'Ranchi', 'Abu Dhabi',  'Dubai', 'Navi Mumbai', 'Lucknow', 'Guwahati']
 
 
-#pipe = pickle.load(open('pipe.pkl', 'rb'))
+
 pipe = joblib.load(open('pipe.joblib','rb'))
 
 st.title('IPL WIN PREDICTOR')
