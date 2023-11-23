@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 
+
 teams = ['Chennai Super Kings',
  'Delhi Capitals',
  'Gujarat Titans',
@@ -25,6 +26,12 @@ except FileNotFoundError:
     print("File not found. Check the file path.")
 except Exception as e:
     print("Error loading pickled file:", e)
+
+except FileNotFoundError:
+    st.error("File not found. Check the file path.")
+except Exception as e:
+    st.error(f"Error loading pickled file: {e}")
+
 
 
 
