@@ -19,18 +19,7 @@ Cities = ['Bangalore', 'Delhi', 'Kolkata', 'Mumbai', 'Hyderabad', 'Chennai',
        'Raipur', 'Ranchi', 'Abu Dhabi',  'Dubai', 'Navi Mumbai', 'Lucknow', 'Guwahati']
 
 
-try:
-    with open('pipe.pkl', 'rb') as file:
-        pipe = pickle.load(file)
-except FileNotFoundError:
-    print("File not found. Check the file path.")
-except Exception as e:
-    print("Error loading pickled file:", e)
-
-except FileNotFoundError:
-    st.error("File not found. Check the file path.")
-except Exception as e:
-    st.error(f"Error loading pickled file: {e}")
+pipe = pickle.load(open('pipe.pkl', 'rb'))
 
 
 
