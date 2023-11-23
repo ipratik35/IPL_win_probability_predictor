@@ -19,7 +19,7 @@ Cities = ['Bangalore', 'Delhi', 'Kolkata', 'Mumbai', 'Hyderabad', 'Chennai',
        'Raipur', 'Ranchi', 'Abu Dhabi',  'Dubai', 'Navi Mumbai', 'Lucknow', 'Guwahati']
 
 
-pipe = pickle.load(open('pipe.pkl', 'rb'))
+pipes = pickle.load(open('pipe.pkl', 'rb'))
 
 
 
@@ -64,7 +64,7 @@ if st.button('Predict Probability'):
                             'city':[selected_city], 'runs_left':[runs_left], 'balls_left': [balls_left],
                             'wickets': [wickets], 'total_runs_x': [target], 'crr': [crr], 'rrr': [rrr]})
 
-    result = pipe.predict_proba(input_df)
+    result = pipes.predict_proba(input_df)
     loss = result[0][0]
     win = result[0][1]
     st.header(batting_team + " - " + str(round(win * 100))+ "%" )
